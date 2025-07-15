@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1752398084 source:/home/yeojun/PS/24479.cpp
+	<cstdio>
+	<algorithm>
+	<vector>
+	<unordered_set>
+
