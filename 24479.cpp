@@ -2,27 +2,28 @@
 #include <map>
 #include <set>
 #include <vector>
+#define MAXN 100001
 
 using namespace std;
 
 int N,M,R,A,B;
 map<int, set<int>> graph;
 set<int> visited;
-vector<int> rst;
+int rst[MAXN];
 
-void dfs(int node, set<int>& v)
+void dfs(int node, set<int>& v, int idx)
 {
     v.insert(node);
-    rst.push_back(node);
+    rst[idx] = node;
 
     for (int n : graph[node])
     {
         if (v.count(n) == 0)
         {
-            dfs(n, v);
+            dfs(n, v, idx+1);
         }
     }
-
+}
 
 int main()
 {
@@ -34,16 +35,9 @@ int main()
         graph[B].insert(A);
     }
 
-    dfs(R, visited);
-    for (int i=0;i<N;i++)
-    {
-        if (visited.count(i+1) == 0)
-        {
-            printf("0\n");
-            continue;
-        }
-        printf("%d\n", rst[i]);
-    }
+    dfs(R, visited, 0);
+
+    for
 
     return 0;
 }

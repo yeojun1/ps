@@ -1,7 +1,18 @@
 # depslib dependency file v1.0
-1752398084 source:/home/yeojun/PS/24479.cpp
+1752654822 source:/home/yeojun/PS/24479.cpp
 	<cstdio>
-	<algorithm>
+	<map>
+	<set>
 	<vector>
+
+1752563751 source:/home/yeojun/PS/1260.cpp
+	<cstdio>
+	<map>
 	<unordered_set>
+	<set>
+	<queue>
+
+1752563745 source:/home/yeojun/PS/2606.cpp
+	<cstdio>
+	<vector>
 
