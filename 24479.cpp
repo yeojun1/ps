@@ -37,7 +37,5 @@ int main()
 
     dfs(R, visited, 0);
 
-    for
-
     return 0;
 }

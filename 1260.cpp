@@ -1,13 +1,13 @@
 #include <cstdio>
-#include <map>
 #include <unordered_set>
 #include <set>
 #include <queue>
+#define MAXN 1001
 
 using namespace std;
 
 int N,M,V,A,B;
-map<int, set<int>> graph;
+set<int> graph[MAXN];
 unordered_set<int> visited;
 
 void dfs(int node, unordered_set<int>& v)
