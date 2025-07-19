@@ -20,6 +20,9 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="1260.cpp" />
+		<Unit filename="17616.cpp" />
+		<Unit filename="20186.cpp" />
+		<Unit filename="20187.cpp" />
 		<Unit filename="24479.cpp" />
 		<Unit filename="2606.cpp" />
 		<Extensions />
