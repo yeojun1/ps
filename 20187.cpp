@@ -51,36 +51,7 @@ int main()
     hole[1] = hor(hole[0]);
     hole[2] = ver(hole[0]);
     hole[3] = hor(ver(hole[0]));
-
-    for (int i=0;i<pow(2, k);i++)
-    {
-        if (i%2 != 0)
-        {
-            for (int j=0;j<pow(2,k);j++)
-            {
-                if (j%2 == 0)
-                {
-                    printf("%d ", hole[1]);
-                } else
-                {
-                    printf("%d ", hole[0]);
-                }
-            }
-        } else
-        {
-            for (int j=0;j<pow(2,k);j++)
-            {
-                if (j%2 == 0)
-                {
-                    printf("%d ", hole[3]);
-                } else
-                {
-                    printf("%d ", hole[2]);
-                }
-            }
-        }
-        printf("\n");
-    }
+    // hole = [3,2,1,0];
 
     return 0;
 }
