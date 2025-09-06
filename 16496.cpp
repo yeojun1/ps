@@ -10,7 +10,7 @@ string A[MAX];
 
 bool comp(string a, string b)
 {
-    return stoll(a+b)>stoll(b+a);
+    return stoull(a+b)>stoull(b+a);
 }
 
 int main()
