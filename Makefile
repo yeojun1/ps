@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17
+CXXFLAGS = -O2 -Wall -Wextra -lm -std=gnu++17
 
 %: %.cpp
 	$(CXX) $(CXXFLAGS) -o $@.out $@.cpp
