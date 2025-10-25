@@ -6,7 +6,9 @@ using ll = long long;
 int N,S;
 int A[MAX];
 vector<ll> sums[2];
-int ans;
+ll ans;
+pair<int,int> cnt;
+pair<int,int> idxs;
 
 void f(int i, ll sum, int ari)
 {
@@ -29,18 +31,24 @@ int main()
     sort(sums[0].begin(),sums[0].end());
     sort(sums[1].begin(),sums[1].end());
 
-    int e=sums[1].size()-1;
-    for (size_t s=0;s<sums[0].size();s++)
+    int s=0, e=sums[1].size()-1;
+    while (0<=e && s<sums[0].size())
     {
-        while (e>=0 && sums[0][s]+sums[1][e]!=S) e--;
-        while (e>=0 && sums[0][s]+sums[1][e]==S)
+        if (sums[0][s]+sums[1][e]>S) e--;
+        else if (sums[0][s]+sums[1][e]<S) s++;
+        else
         {
-            ans++;
-            e--;
+            cnt.first = 1;
+            cnt.second = 1;
+            idxs.first = sums[0][s];
+            idxs.second = sums[1][e];
+            while (++s < sums[0].size() && sums[0][s] == idxs.first) cnt.first++;
+            while (0 <= --e && sums[1][e] == idxs.second) cnt.second++;
+            ans += 1LL*cnt.first*cnt.second;
         }
     }
 
-    printf("%d\n",ans);
+    printf("%lld\n",ans - (S==0?1:0));
 
     return 0;
 }
